@@ -1,94 +1,565 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>Python学习 day1</title>
-      <link href="/2025/03/16/Python%E5%AD%A6%E4%B9%A0%20day1/"/>
-      <url>/2025/03/16/Python%E5%AD%A6%E4%B9%A0%20day1/</url>
-      
-        <content type="html"><![CDATA[<p>今天！我们将详细展开<strong>阶段 1 第 1 周 第 1 天</strong>的学习内容，帮助你循序渐进地掌握 Python 基础知识，并完成实践任务。今天的主题是 <strong>Python 基础：安装环境（Python 3.x、VS Code），学习变量、数据类型、运算符</strong>，最终完成实践任务：<strong>编写代码计算圆的面积和周长，尝试用不同数据类型存储变量</strong>。</p><hr><h3 id="第-1-天学习计划"><a href="#第-1-天学习计划" class="headerlink" title="第 1 天学习计划"></a>第 1 天学习计划</h3><ul><li><strong>学习内容</strong>：Python 基础：安装环境（Python 3.x、VS Code），学习变量、数据类型、运算符</li><li><strong>资源推荐</strong>：《Python 速成课程》第 1-2 章，Python 官方文档（<a href="https://docs.python.org/3/tutorial/%EF%BC%89">https://docs.python.org/3/tutorial/）</a></li><li><strong>实践任务</strong>：编写代码：计算圆的面积和周长，尝试用不同数据类型存储变量</li><li><strong>时间分配</strong>：2 小时（理论 1 小时，实践 1 小时）</li></ul><hr><h3 id="详细学习步骤"><a href="#详细学习步骤" class="headerlink" title="详细学习步骤"></a>详细学习步骤</h3><h4 id="1-理论学习（1-小时）"><a href="#1-理论学习（1-小时）" class="headerlink" title="1. 理论学习（1 小时）"></a>1. 理论学习（1 小时）</h4><p>我们将分步骤讲解今天的知识点，确保你理解每个概念。</p><h5 id="1-1-安装-Python-环境（15-分钟）"><a href="#1-1-安装-Python-环境（15-分钟）" class="headerlink" title="1.1 安装 Python 环境（15 分钟）"></a>1.1 安装 Python 环境（15 分钟）</h5><p><strong>知识点</strong>：</p><ul><li>Python 是什么：Python 是一种高级、解释型、通用编程语言，广泛用于 Web 开发、数据科学、AI&#x2F;ML 等领域。</li><li>Python 版本：目前主流版本是 Python 3.x（例如 3.11 或 3.12）。Python 2.x 已于 2020 年停止支持，不建议使用。</li><li>安装步骤：根据操作系统（Windows、macOS、Linux）下载并安装 Python。</li></ul><p><strong>学习步骤</strong>：</p><ol><li><strong>检查是否已安装 Python</strong>：<ul><li>打开终端（Windows：cmd 或 PowerShell；macOS&#x2F;Linux：Terminal）。</li><li>输入命令 <code>python --version</code> 或 <code>python3 --version</code>。</li><li>如果显示版本号（如 <code>Python 3.11.5</code>），说明已安装；否则需要安装。</li></ul></li><li><strong>下载 Python</strong>：<ul><li>访问 Python 官网（<a href="https://www.python.org/downloads/%EF%BC%89%E3%80%82">https://www.python.org/downloads/）。</a></li><li>下载适合你操作系统的最新版本（建议 3.11 或 3.12）。</li><li>Windows 用户：下载 <code>.exe</code> 文件；macOS&#x2F;Linux 用户：下载相应安装包。</li></ul></li><li><strong>安装 Python</strong>：<ul><li>Windows：运行 <code>.exe</code> 文件，勾选“Add Python to PATH”选项，然后点击“Install Now”。</li><li>macOS&#x2F;Linux：按照提示安装（macOS 可能需要 <code>brew install python3</code>，Linux 可能需要 <code>sudo apt install python3</code>）。</li></ul></li><li><strong>验证安装</strong>：<ul><li>再次运行 <code>python --version</code> 或 <code>python3 --version</code>，确认版本号。</li><li>运行 <code>python</code> 或 <code>python3</code> 进入 Python 交互式环境，输入 <code>print(&quot;Hello, Python!&quot;)</code> 验证是否正常工作。</li></ul></li></ol><p><strong>小练习</strong>：</p><ul><li>运行 <code>python --version</code> 确认版本。</li><li>在 Python 交互式环境中输入 <code>2 + 3</code>，观察输出是否为 <code>5</code>。</li></ul><hr><h5 id="1-2-安装-VS-Code（10-分钟）"><a href="#1-2-安装-VS-Code（10-分钟）" class="headerlink" title="1.2 安装 VS Code（10 分钟）"></a>1.2 安装 VS Code（10 分钟）</h5><p><strong>知识点</strong>：</p><ul><li>VS Code（Visual Studio Code）是一款轻量级代码编辑器，支持 Python 开发，适合初学者。</li><li>配置 Python 扩展：VS Code 需要安装 Python 扩展以支持代码高亮、调试等功能。</li></ul><p><strong>学习步骤</strong>：</p><ol><li><strong>下载 VS Code</strong>：<ul><li>访问 VS Code 官网（<a href="https://code.visualstudio.com/%EF%BC%89%E3%80%82">https://code.visualstudio.com/）。</a></li><li>下载适合你操作系统的版本（Windows、macOS、Linux）。</li></ul></li><li><strong>安装 VS Code</strong>：<ul><li>按照提示完成安装（通常是双击安装包，点击“Next”或“Install”）。</li></ul></li><li><strong>安装 Python 扩展</strong>：<ul><li>打开 VS Code。</li><li>点击左侧活动栏的“扩展”图标（或按快捷键 <code>Ctrl+Shift+X</code>）。</li><li>在搜索框中输入 <code>Python</code>，找到 Microsoft 官方的 Python 扩展，点击“Install”。</li></ul></li><li><strong>配置 Python 解释器</strong>：<ul><li>按 <code>Ctrl+Shift+P</code> 打开命令面板。</li><li>输入 <code>Python: Select Interpreter</code>，选择你安装的 Python 版本（例如 <code>Python 3.11.5</code>）。</li></ul></li><li><strong>测试环境</strong>：<ul><li>创建一个新文件，命名为 <code>test.py</code>。</li><li>输入以下代码：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello from VS Code!&quot;</span>)</span><br></pre></td></tr></table></figure></li><li>点击右上角的“运行”按钮（三角形图标），或按 <code>F5</code>，确认输出 <code>Hello from VS Code!</code>。</li></ul></li></ol><p><strong>小练习</strong>：</p><ul><li>运行 <code>test.py</code> 文件，确认输出。</li><li>尝试修改代码为 <code>print(&quot;I am learning Python!&quot;)</code>，重新运行。</li></ul><hr><h5 id="1-3-变量与数据类型（20-分钟）"><a href="#1-3-变量与数据类型（20-分钟）" class="headerlink" title="1.3 变量与数据类型（20 分钟）"></a>1.3 变量与数据类型（20 分钟）</h5><p><strong>知识点</strong>：</p><ul><li>变量：变量是用来存储数据的容器，Python 中变量无需声明类型。</li><li>变量命名规则：<ul><li>只能包含字母、数字、下划线（<code>_</code>），且不能以数字开头。</li><li>区分大小写（<code>age</code> 和 <code>Age</code> 是不同的变量）。</li><li>不能使用 Python 关键字（如 <code>if</code>、<code>for</code>、<code>print</code>）。</li></ul></li><li>基本数据类型：<ul><li>整数（<code>int</code>）：如 <code>42</code>。</li><li>浮点数（<code>float</code>）：如 <code>3.14</code>。</li><li>字符串（<code>str</code>）：如 <code>&quot;hello&quot;</code>（用单引号或双引号）。</li><li>布尔值（<code>bool</code>）：如 <code>True</code>、<code>False</code>。</li></ul></li><li>查看变量类型：使用 <code>type()</code> 函数。</li><li>类型转换：用 <code>int()</code>、<code>float()</code>、<code>str()</code> 等函数转换类型。</li></ul><p><strong>学习步骤</strong>：</p><ol><li><strong>创建变量</strong>：<ul><li>在 VS Code 中新建文件 <code>variables.py</code>。</li><li>输入以下代码：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">25</span>           <span class="comment"># 整数</span></span><br><span class="line">height = <span class="number">1.75</span>      <span class="comment"># 浮点数</span></span><br><span class="line">name = <span class="string">&quot;Alice&quot;</span>     <span class="comment"># 字符串</span></span><br><span class="line">is_student = <span class="literal">True</span>  <span class="comment"># 布尔值</span></span><br><span class="line"><span class="built_in">print</span>(age, height, name, is_student)</span><br></pre></td></tr></table></figure></li><li>运行代码，观察输出：<code>25 1.75 Alice True</code>。</li></ul></li><li><strong>查看类型</strong>：<ul><li>修改代码，添加 <code>type()</code>：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(age))      <span class="comment"># 输出：&lt;class &#x27;int&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(height))   <span class="comment"># 输出：&lt;class &#x27;float&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(name))     <span class="comment"># 输出：&lt;class &#x27;str&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(is_student))  <span class="comment"># 输出：&lt;class &#x27;bool&#x27;&gt;</span></span><br></pre></td></tr></table></figure></li><li>运行代码，确认类型。</li></ul></li><li><strong>类型转换</strong>：<ul><li>输入以下代码：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">num_str = <span class="string">&quot;123&quot;</span>    <span class="comment"># 字符串</span></span><br><span class="line">num = <span class="built_in">int</span>(num_str) <span class="comment"># 转换为整数</span></span><br><span class="line"><span class="built_in">print</span>(num + <span class="number">10</span>)    <span class="comment"># 输出：133</span></span><br></pre></td></tr></table></figure></li><li>再尝试浮点数转换：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">float_str = <span class="string">&quot;3.14&quot;</span></span><br><span class="line">float_num = <span class="built_in">float</span>(float_str)</span><br><span class="line"><span class="built_in">print</span>(float_num + <span class="number">2.0</span>)  <span class="comment"># 输出：5.14</span></span><br></pre></td></tr></table></figure></li></ul></li></ol><p><strong>小练习</strong>：</p><ul><li>创建变量 <code>score = 95.5</code> 和 <code>subject = &quot;Math&quot;</code>，打印它们的类型。</li><li>将字符串 <code>&quot;42.5&quot;</code> 转换为浮点数，打印结果。</li></ul><hr><h5 id="1-4-运算符（15-分钟）"><a href="#1-4-运算符（15-分钟）" class="headerlink" title="1.4 运算符（15 分钟）"></a>1.4 运算符（15 分钟）</h5><p><strong>知识点</strong>：</p><ul><li>算术运算符：<ul><li><code>+</code>（加）、<code>-</code>（减）、<code>*</code>（乘）、<code>/</code>（除）、<code>//</code>（整除）、<code>%</code>（取模）、<code>**</code>（幂）。</li></ul></li><li>比较运算符：<ul><li><code>==</code>（等于）、<code>!=</code>（不等于）、<code>&lt;</code>（小于）、<code>&gt;</code>（大于）、<code>&lt;=</code>（小于等于）、<code>&gt;=</code>（大于等于）。</li></ul></li><li>逻辑运算符：<ul><li><code>and</code>（与）、<code>or</code>（或）、<code>not</code>（非）。</li></ul></li><li>赋值运算符：<ul><li><code>=</code>（赋值）、<code>+=</code>、<code>-=</code>, 等。</li></ul></li></ul><p><strong>学习步骤</strong>：</p><ol><li><strong>算术运算</strong>：<ul><li>在 <code>operators.py</code> 文件中输入：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(a + b)   <span class="comment"># 输出：13</span></span><br><span class="line"><span class="built_in">print</span>(a - b)   <span class="comment"># 输出：7</span></span><br><span class="line"><span class="built_in">print</span>(a * b)   <span class="comment"># 输出：30</span></span><br><span class="line"><span class="built_in">print</span>(a / b)   <span class="comment"># 输出：3.333...</span></span><br><span class="line"><span class="built_in">print</span>(a // b)  <span class="comment"># 输出：3</span></span><br><span class="line"><span class="built_in">print</span>(a % b)   <span class="comment"># 输出：1</span></span><br><span class="line"><span class="built_in">print</span>(a ** <span class="number">2</span>)  <span class="comment"># 输出：100</span></span><br></pre></td></tr></table></figure></li><li>运行代码，理解每个运算符的作用。</li></ul></li><li><strong>比较与逻辑运算</strong>：<ul><li>输入：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">5</span></span><br><span class="line">y = <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(x &lt; y)      <span class="comment"># 输出：True</span></span><br><span class="line"><span class="built_in">print</span>(x == y)     <span class="comment"># 输出：False</span></span><br><span class="line"><span class="built_in">print</span>(x &gt; <span class="number">3</span> <span class="keyword">and</span> y &lt; <span class="number">15</span>)  <span class="comment"># 输出：True</span></span><br><span class="line"><span class="built_in">print</span>(x &gt; <span class="number">7</span> <span class="keyword">or</span> y &lt; <span class="number">5</span>)    <span class="comment"># 输出：False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> x == <span class="number">5</span>)        <span class="comment"># 输出：False</span></span><br></pre></td></tr></table></figure></li><li>运行代码，观察结果。</li></ul></li><li><strong>赋值运算</strong>：<ul><li>输入：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">20</span></span><br><span class="line">num += <span class="number">5</span>  <span class="comment"># 等价于 num = num + 5</span></span><br><span class="line"><span class="built_in">print</span>(num)  <span class="comment"># 输出：25</span></span><br><span class="line">num *= <span class="number">2</span>  <span class="comment"># 等价于 num = num * 2</span></span><br><span class="line"><span class="built_in">print</span>(num)  <span class="comment"># 输出：50</span></span><br></pre></td></tr></table></figure></li></ul></li></ol><p><strong>小练习</strong>：</p><ul><li>计算 <code>(8 + 4) * 2</code> 和 <code>15 % 4</code>。</li><li>判断 <code>7 &gt; 3 and 4 &lt; 10</code> 的结果。</li></ul><hr><h4 id="2-实践任务（1-小时）"><a href="#2-实践任务（1-小时）" class="headerlink" title="2. 实践任务（1 小时）"></a>2. 实践任务（1 小时）</h4><p><strong>任务</strong>：编写代码计算圆的面积和周长，尝试用不同数据类型存储变量。</p><h5 id="任务目标"><a href="#任务目标" class="headerlink" title="任务目标"></a>任务目标</h5><ul><li>计算圆的面积（公式：<code>面积 = π * 半径^2</code>）和周长（公式：<code>周长 = 2 * π * 半径</code>）。</li><li>使用不同数据类型（如整数、浮点数、字符串）存储变量。</li></ul><h5 id="步骤分解"><a href="#步骤分解" class="headerlink" title="步骤分解"></a>步骤分解</h5><ol><li><strong>创建文件</strong>（5 分钟）：<ul><li>在 VS Code 中新建文件 <code>circle.py</code>。</li></ul></li><li><strong>导入 math 模块获取 π</strong>（5 分钟）：<ul><li>Python 的 <code>math</code> 模块提供了数学常量和函数。</li><li>输入：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="built_in">print</span>(math.pi)  <span class="comment"># 输出：3.141592653589793</span></span><br></pre></td></tr></table></figure></li><li>确认 <code>math.pi</code> 可用。</li></ul></li><li><strong>定义半径并计算</strong>（20 分钟）：<ul><li>使用不同数据类型存储半径：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用浮点数存储半径</span></span><br><span class="line">radius_float = <span class="number">5.0</span></span><br><span class="line"><span class="comment"># 使用整数存储半径</span></span><br><span class="line">radius_int = <span class="number">5</span></span><br><span class="line"><span class="comment"># 使用字符串存储半径（需转换）</span></span><br><span class="line">radius_str = <span class="string">&quot;5.0&quot;</span></span><br><span class="line">radius_from_str = <span class="built_in">float</span>(radius_str)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算面积和周长（基于浮点数半径）</span></span><br><span class="line">area = math.pi * radius_float ** <span class="number">2</span></span><br><span class="line">circumference = <span class="number">2</span> * math.pi * radius_float</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印结果</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;半径（浮点数）:&quot;</span>, radius_float)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;面积:&quot;</span>, area)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;周长:&quot;</span>, circumference)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证其他数据类型</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;半径（整数）:&quot;</span>, radius_int)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;半径（从字符串转换）:&quot;</span>, radius_from_str)</span><br></pre></td></tr></table></figure></li><li>运行代码，输出示例：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">半径（浮点数）: 5.0</span><br><span class="line">面积: 78.53981633974483</span><br><span class="line">周长: 31.41592653589793</span><br><span class="line">半径（整数）: 5</span><br><span class="line">半径（从字符串转换）: 5.0</span><br></pre></td></tr></table></figure></li></ul></li><li><strong>尝试不同数据类型</strong>（15 分钟）：<ul><li>修改半径值，测试不同类型：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 尝试更大的半径</span></span><br><span class="line">radius_float = <span class="number">10.5</span></span><br><span class="line">area = math.pi * radius_float ** <span class="number">2</span></span><br><span class="line">circumference = <span class="number">2</span> * math.pi * radius_float</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;新半径（浮点数）:&quot;</span>, radius_float)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;新面积:&quot;</span>, area)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;新周长:&quot;</span>, circumference)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 尝试字符串转换错误情况</span></span><br><span class="line">radius_str_invalid = <span class="string">&quot;abc&quot;</span>  <span class="comment"># 无法转换为浮点数</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    radius_from_str = <span class="built_in">float</span>(radius_str_invalid)</span><br><span class="line"><span class="keyword">except</span> ValueError:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;错误：无法将&quot;</span>, radius_str_invalid, <span class="string">&quot;转换为浮点数&quot;</span>)</span><br></pre></td></tr></table></figure></li><li>运行代码，观察输出和错误处理。</li></ul></li><li><strong>验证与总结</strong>（15 分钟）：<ul><li>检查计算结果是否正确（可以用计算器验证）。</li><li>确保使用了不同数据类型（<code>int</code>、<code>float</code>、<code>str</code>）存储半径，并完成了类型转换。</li><li>保存代码，提交到 GitHub（如果已学习 Git）。</li></ul></li></ol><hr><h3 id="学习总结"><a href="#学习总结" class="headerlink" title="学习总结"></a>学习总结</h3><ol><li><strong>知识点掌握</strong>：<ul><li>安装了 Python 和 VS Code，配置了开发环境。</li><li>理解了变量的定义和命名规则。</li><li>掌握了基本数据类型（<code>int</code>、<code>float</code>、<code>str</code>、<code>bool</code>）和类型转换。</li><li>学会了基本运算符（算术、比较、逻辑、赋值）。</li></ul></li><li><strong>实践任务完成</strong>：<ul><li>成功编写代码计算圆的面积和周长。</li><li>使用了不同数据类型（<code>int</code>、<code>float</code>、<code>str</code>）存储半径，并进行了类型转换。</li></ul></li><li><strong>遇到问题</strong>：<ul><li>如果安装过程中遇到问题，可以参考 Python 官网的安装指南或搜索错误信息。</li><li>如果类型转换报错（如 <code>ValueError</code>），说明输入的字符串无法转换为数值。</li></ul></li></ol><hr><h3 id="下一步建议"><a href="#下一步建议" class="headerlink" title="下一步建议"></a>下一步建议</h3><ul><li><strong>复习</strong>：回顾今天的代码，确保理解每个部分的作用。</li><li><strong>扩展练习</strong>：<ul><li>尝试计算其他图形的面积（如矩形、三角形）。</li><li>编写代码，将浮点数 <code>3.14</code> 转换为字符串并拼接输出，例如 <code>&quot;Pi is &quot; + str(3.14)</code>。</li></ul></li><li><strong>准备</strong>：明天将学习条件语句和循环，预习《Python 速成课程》第 3-4 章。</li></ul><p>如果在学习或实践过程中遇到任何问题，随时告诉我，我会进一步协助你！祝你学习顺利！</p><p><img src="https://cdn.yuanfei.fun/2024-08-29-15-32-38.png"></p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>MacOS软件打开显示已损坏解决方法</title>
+    <url>/2024/08/29/MacOS%E8%BD%AF%E4%BB%B6%E6%89%93%E5%BC%80%E6%98%BE%E7%A4%BA%E5%B7%B2%E6%8D%9F%E5%9D%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>macOS打开软件提示:“xxx” 已损坏,打不开.您应该将它移到废纸篓 或 无法打开“xxx”，因为无法确认开发者的身份，这个并不是软件真的损坏了,而是由于macOS系统权限和签名的原因，我们只要打开允许任何来源和者手动签名软件就可以了，以下是解决方法请根据需要选择。</p>
+</blockquote>
+<h2 id="1-打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App-Store商店下载的软件"><a href="#1-打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App-Store商店下载的软件" class="headerlink" title="1. 打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App Store商店下载的软件)"></a>1. 打开允许安装从任何位置下载应用程序，<strong>简单的说就是允许安装不是从App Store商店下载的软件)</strong></h2><blockquote>
+<p>Mac电脑默认设置是不允许运行和安装从网上下载的APP和安装包。一般新买的电脑或者刚重装系统或升级系统后的macOS就需要打开“任何来源”这个选项。</p>
+</blockquote>
+<ul>
+<li>我们打开启动台–其他–终端，打开终端</li>
+</ul>
+<p><img src="https://cdn.yuanfei.fun/2024-08-29-14-58-48.png"></p>
+<ul>
+<li>然后输入下面的命令按回车键运行，建议你直接拷贝粘贴，以免你输入错命令；</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>粘贴入命令运行之后会提示Password：输入密码(下图所示)，然后输入你的Mac开机密码按回车键运行即可。</li>
+</ul>
+<blockquote>
+<p><strong>需要注意，密码输入过程是看不见的！</strong></p>
+</blockquote>
+<p><img src="https://cdn.yuanfei.fun/2024-08-29-15-01-07.png"></p>
+<ul>
+<li>最后我们再打开 “系统偏好设置” – “安全性与隐私” – “允许从以下位置下载的App：”，可以看到勾选已经变成了“任何来源”。</li>
+</ul>
+<h2 id="2-对于不是从App-Store商店下载的软件即从网上下载的APP签名操作"><a href="#2-对于不是从App-Store商店下载的软件即从网上下载的APP签名操作" class="headerlink" title="2.对于不是从App Store商店下载的软件即从网上下载的APP签名操作"></a>2.<strong>对于</strong>不是从App Store商店下载的软件即从网上下载的<strong>APP签名操作</strong></h2><blockquote>
+<p>这些命令都是Apple官方公证Gatekeeper命令，即绕过应用签名操作方法，对系统没有任何影响隐患，可以放心大胆的操作。</p>
+</blockquote>
+<ul>
+<li>签名命令：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>使用方法 sudo xattr -rd com.apple.quarantine空格 APP路径</p>
+</blockquote>
+<h3 id="2-1-我们打开启动台–其他–终端，打开终端"><a href="#2-1-我们打开启动台–其他–终端，打开终端" class="headerlink" title="2.1 我们打开启动台–其他–终端，打开终端"></a>2.1 我们打开启动台–其他–终端，打开终端</h3><p><img src="https://cdn.yuanfei.fun/2024-08-29-14-58-48.png"></p>
+<h3 id="2-2-然后拷贝下面的命令并粘贴到终端"><a href="#2-2-然后拷贝下面的命令并粘贴到终端" class="headerlink" title="2.2 然后拷贝下面的命令并粘贴到终端"></a>2.2 然后拷贝下面的命令并粘贴到终端</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：sudo xattr -rd com.apple.quarantine后面需要加个空格，操作好后，先不要运行，终端不要关闭。</p>
+</blockquote>
+<blockquote>
+<p>我们这里以Gas Station Simulator为例子，打开“访达” – “应用程序”文件夹找到要操作的APP，找到Gas Station Simulator的应用图标“GSS2”并把它拖到终端里面（如下图）：</p>
+</blockquote>
+<p><img src="https://cdn.yuanfei.fun/2024-08-29-15-32-07.png"></p>
+<blockquote>
+<p>注意！密码输入过程是看不见的。</p>
+</blockquote>
+<p><img src="https://cdn.yuanfei.fun/2024-08-29-15-32-38.png"></p>
+]]></content>
       <categories>
-          
-          <category> 技术 </category>
-          
-          <category> Python </category>
-          
+        <category>技术</category>
+        <category>MacOS</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 技术 </tag>
-            
-            <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>解决 MacOS 微信 QQ 正常登录网页无法访问</title>
-      <link href="/2024/09/23/%E8%A7%A3%E5%86%B3%20MacOS%20%E5%BE%AE%E4%BF%A1%20QQ%20%E6%AD%A3%E5%B8%B8%E7%99%BB%E5%BD%95%E7%BD%91%E9%A1%B5%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/"/>
-      <url>/2024/09/23/%E8%A7%A3%E5%86%B3%20MacOS%20%E5%BE%AE%E4%BF%A1%20QQ%20%E6%AD%A3%E5%B8%B8%E7%99%BB%E5%BD%95%E7%BD%91%E9%A1%B5%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>今天遇到一个问题，电脑可以正常登录微信、QQ 等通讯工具，但是网页无论如何也打不开。下面来看看解决思路。</p></blockquote><h2 id="一、删除-apple-网络记录"><a href="#一、删除-apple-网络记录" class="headerlink" title="一、删除 apple 网络记录"></a>一、删除 apple 网络记录</h2><blockquote><p>打开放大，点击上方菜单中的「前往」，复制这个路径「&#x2F;Library&#x2F;Preferences&#x2F;SystemConfiguration」，全选改文件夹下的所有文件，并找到「com.apple.Boot.plist」取消选中，删除除「com.apple.Boot.plist」之外的所有文件，重启即可。</p></blockquote><p><img src="https://cdn.yuanfei.fun/2024-09-23-14-51-12.png" alt="2024-09-23-14-51-12"></p><p><img src="https://cdn.yuanfei.fun/2024-09-23-14-52-41.png" alt="2024-09-23-14-52-41"></p><p><img src="https://cdn.yuanfei.fun/2024-09-23-14-54-40.png" alt="2024-09-23-14-54-40"></p>]]></content>
-      
-      
+      <tags>
+        <tag>MacOS</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决 MacOS 微信 QQ 正常登录网页无法访问</title>
+    <url>/2024/09/23/%E8%A7%A3%E5%86%B3%20MacOS%20%E5%BE%AE%E4%BF%A1%20QQ%20%E6%AD%A3%E5%B8%B8%E7%99%BB%E5%BD%95%E7%BD%91%E9%A1%B5%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/</url>
+    <content><![CDATA[<blockquote>
+<p>今天遇到一个问题，电脑可以正常登录微信、QQ 等通讯工具，但是网页无论如何也打不开。下面来看看解决思路。</p>
+</blockquote>
+<h2 id="一、删除-apple-网络记录"><a href="#一、删除-apple-网络记录" class="headerlink" title="一、删除 apple 网络记录"></a>一、删除 apple 网络记录</h2><blockquote>
+<p>打开放大，点击上方菜单中的「前往」，复制这个路径「&#x2F;Library&#x2F;Preferences&#x2F;SystemConfiguration」，全选改文件夹下的所有文件，并找到「com.apple.Boot.plist」取消选中，删除除「com.apple.Boot.plist」之外的所有文件，重启即可。</p>
+</blockquote>
+<p><img src="https://cdn.yuanfei.fun/2024-09-23-14-51-12.png" alt="2024-09-23-14-51-12"></p>
+<p><img src="https://cdn.yuanfei.fun/2024-09-23-14-52-41.png" alt="2024-09-23-14-52-41"></p>
+<p><img src="https://cdn.yuanfei.fun/2024-09-23-14-54-40.png" alt="2024-09-23-14-54-40"></p>
+]]></content>
       <categories>
-          
-          <category> 技术 </category>
-          
-          <category> MacOS </category>
-          
+        <category>技术</category>
+        <category>MacOS</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> MacOS </tag>
-            
-            <tag> 技术 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MacOS软件打开显示已损坏解决方法</title>
-      <link href="/2024/08/29/MacOS%E8%BD%AF%E4%BB%B6%E6%89%93%E5%BC%80%E6%98%BE%E7%A4%BA%E5%B7%B2%E6%8D%9F%E5%9D%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
-      <url>/2024/08/29/MacOS%E8%BD%AF%E4%BB%B6%E6%89%93%E5%BC%80%E6%98%BE%E7%A4%BA%E5%B7%B2%E6%8D%9F%E5%9D%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>macOS打开软件提示:“xxx” 已损坏,打不开.您应该将它移到废纸篓 或 无法打开“xxx”，因为无法确认开发者的身份，这个并不是软件真的损坏了,而是由于macOS系统权限和签名的原因，我们只要打开允许任何来源和者手动签名软件就可以了，以下是解决方法请根据需要选择。</p></blockquote><h2 id="1-打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App-Store商店下载的软件"><a href="#1-打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App-Store商店下载的软件" class="headerlink" title="1. 打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App Store商店下载的软件)"></a>1. 打开允许安装从任何位置下载应用程序，<strong>简单的说就是允许安装不是从App Store商店下载的软件)</strong></h2><blockquote><p>Mac电脑默认设置是不允许运行和安装从网上下载的APP和安装包。一般新买的电脑或者刚重装系统或升级系统后的macOS就需要打开“任何来源”这个选项。</p></blockquote><ul><li>我们打开启动台–其他–终端，打开终端</li></ul><p><img src="https://cdn.yuanfei.fun/2024-08-29-14-58-48.png"></p><ul><li>然后输入下面的命令按回车键运行，建议你直接拷贝粘贴，以免你输入错命令；</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure><ul><li>粘贴入命令运行之后会提示Password：输入密码(下图所示)，然后输入你的Mac开机密码按回车键运行即可。</li></ul><blockquote><p><strong>需要注意，密码输入过程是看不见的！</strong></p></blockquote><p><img src="https://cdn.yuanfei.fun/2024-08-29-15-01-07.png"></p><ul><li>最后我们再打开 “系统偏好设置” – “安全性与隐私” – “允许从以下位置下载的App：”，可以看到勾选已经变成了“任何来源”。</li></ul><h2 id="2-对于不是从App-Store商店下载的软件即从网上下载的APP签名操作"><a href="#2-对于不是从App-Store商店下载的软件即从网上下载的APP签名操作" class="headerlink" title="2.对于不是从App Store商店下载的软件即从网上下载的APP签名操作"></a>2.<strong>对于</strong>不是从App Store商店下载的软件即从网上下载的<strong>APP签名操作</strong></h2><blockquote><p>这些命令都是Apple官方公证Gatekeeper命令，即绕过应用签名操作方法，对系统没有任何影响隐患，可以放心大胆的操作。</p></blockquote><ul><li>签名命令：</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine</span><br></pre></td></tr></table></figure><blockquote><p>使用方法 sudo xattr -rd com.apple.quarantine空格 APP路径</p></blockquote><h3 id="2-1-我们打开启动台–其他–终端，打开终端"><a href="#2-1-我们打开启动台–其他–终端，打开终端" class="headerlink" title="2.1 我们打开启动台–其他–终端，打开终端"></a>2.1 我们打开启动台–其他–终端，打开终端</h3><p><img src="https://cdn.yuanfei.fun/2024-08-29-14-58-48.png"></p><h3 id="2-2-然后拷贝下面的命令并粘贴到终端"><a href="#2-2-然后拷贝下面的命令并粘贴到终端" class="headerlink" title="2.2 然后拷贝下面的命令并粘贴到终端"></a>2.2 然后拷贝下面的命令并粘贴到终端</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine</span><br></pre></td></tr></table></figure><blockquote><p>注意：sudo xattr -rd com.apple.quarantine后面需要加个空格，操作好后，先不要运行，终端不要关闭。</p></blockquote><blockquote><p>我们这里以Gas Station Simulator为例子，打开“访达” – “应用程序”文件夹找到要操作的APP，找到Gas Station Simulator的应用图标“GSS2”并把它拖到终端里面（如下图）：</p></blockquote><p><img src="https://cdn.yuanfei.fun/2024-08-29-15-32-07.png"></p><blockquote><p>注意！密码输入过程是看不见的。</p></blockquote><p><img src="https://cdn.yuanfei.fun/2024-08-29-15-32-38.png"></p>]]></content>
-      
-      
+      <tags>
+        <tag>MacOS</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习 day1</title>
+    <url>/2025/03/16/Python%E5%AD%A6%E4%B9%A0%20day1/</url>
+    <content><![CDATA[<p>今天！我们将详细展开<strong>阶段 1 第 1 周 第 1 天</strong>的学习内容，帮助你循序渐进地掌握 Python 基础知识，并完成实践任务。今天的主题是 <strong>Python 基础：安装环境（Python 3.x、VS Code），学习变量、数据类型、运算符</strong>，最终完成实践任务：<strong>编写代码计算圆的面积和周长，尝试用不同数据类型存储变量</strong>。</p>
+<hr>
+<h3 id="第-1-天学习计划"><a href="#第-1-天学习计划" class="headerlink" title="第 1 天学习计划"></a>第 1 天学习计划</h3><ul>
+<li><strong>学习内容</strong>：Python 基础：安装环境（Python 3.x、VS Code），学习变量、数据类型、运算符</li>
+<li><strong>资源推荐</strong>：《Python 速成课程》第 1-2 章，Python 官方文档（<a href="https://docs.python.org/3/tutorial/%EF%BC%89">https://docs.python.org/3/tutorial/）</a></li>
+<li><strong>实践任务</strong>：编写代码：计算圆的面积和周长，尝试用不同数据类型存储变量</li>
+<li><strong>时间分配</strong>：2 小时（理论 1 小时，实践 1 小时）</li>
+</ul>
+<hr>
+<h3 id="详细学习步骤"><a href="#详细学习步骤" class="headerlink" title="详细学习步骤"></a>详细学习步骤</h3><h4 id="1-理论学习（1-小时）"><a href="#1-理论学习（1-小时）" class="headerlink" title="1. 理论学习（1 小时）"></a>1. 理论学习（1 小时）</h4><p>我们将分步骤讲解今天的知识点，确保你理解每个概念。</p>
+<h5 id="1-1-安装-Python-环境（15-分钟）"><a href="#1-1-安装-Python-环境（15-分钟）" class="headerlink" title="1.1 安装 Python 环境（15 分钟）"></a>1.1 安装 Python 环境（15 分钟）</h5><p><strong>知识点</strong>：</p>
+<ul>
+<li>Python 是什么：Python 是一种高级、解释型、通用编程语言，广泛用于 Web 开发、数据科学、AI&#x2F;ML 等领域。</li>
+<li>Python 版本：目前主流版本是 Python 3.x（例如 3.11 或 3.12）。Python 2.x 已于 2020 年停止支持，不建议使用。</li>
+<li>安装步骤：根据操作系统（Windows、macOS、Linux）下载并安装 Python。</li>
+</ul>
+<p><strong>学习步骤</strong>：</p>
+<ol>
+<li><strong>检查是否已安装 Python</strong>：<ul>
+<li>打开终端（Windows：cmd 或 PowerShell；macOS&#x2F;Linux：Terminal）。</li>
+<li>输入命令 <code>python --version</code> 或 <code>python3 --version</code>。</li>
+<li>如果显示版本号（如 <code>Python 3.11.5</code>），说明已安装；否则需要安装。</li>
+</ul>
+</li>
+<li><strong>下载 Python</strong>：<ul>
+<li>访问 Python 官网（<a href="https://www.python.org/downloads/%EF%BC%89%E3%80%82">https://www.python.org/downloads/）。</a></li>
+<li>下载适合你操作系统的最新版本（建议 3.11 或 3.12）。</li>
+<li>Windows 用户：下载 <code>.exe</code> 文件；macOS&#x2F;Linux 用户：下载相应安装包。</li>
+</ul>
+</li>
+<li><strong>安装 Python</strong>：<ul>
+<li>Windows：运行 <code>.exe</code> 文件，勾选“Add Python to PATH”选项，然后点击“Install Now”。</li>
+<li>macOS&#x2F;Linux：按照提示安装（macOS 可能需要 <code>brew install python3</code>，Linux 可能需要 <code>sudo apt install python3</code>）。</li>
+</ul>
+</li>
+<li><strong>验证安装</strong>：<ul>
+<li>再次运行 <code>python --version</code> 或 <code>python3 --version</code>，确认版本号。</li>
+<li>运行 <code>python</code> 或 <code>python3</code> 进入 Python 交互式环境，输入 <code>print(&quot;Hello, Python!&quot;)</code> 验证是否正常工作。</li>
+</ul>
+</li>
+</ol>
+<p><strong>小练习</strong>：</p>
+<ul>
+<li>运行 <code>python --version</code> 确认版本。</li>
+<li>在 Python 交互式环境中输入 <code>2 + 3</code>，观察输出是否为 <code>5</code>。</li>
+</ul>
+<hr>
+<h5 id="1-2-安装-VS-Code（10-分钟）"><a href="#1-2-安装-VS-Code（10-分钟）" class="headerlink" title="1.2 安装 VS Code（10 分钟）"></a>1.2 安装 VS Code（10 分钟）</h5><p><strong>知识点</strong>：</p>
+<ul>
+<li>VS Code（Visual Studio Code）是一款轻量级代码编辑器，支持 Python 开发，适合初学者。</li>
+<li>配置 Python 扩展：VS Code 需要安装 Python 扩展以支持代码高亮、调试等功能。</li>
+</ul>
+<p><strong>学习步骤</strong>：</p>
+<ol>
+<li><strong>下载 VS Code</strong>：<ul>
+<li>访问 VS Code 官网（<a href="https://code.visualstudio.com/%EF%BC%89%E3%80%82">https://code.visualstudio.com/）。</a></li>
+<li>下载适合你操作系统的版本（Windows、macOS、Linux）。</li>
+</ul>
+</li>
+<li><strong>安装 VS Code</strong>：<ul>
+<li>按照提示完成安装（通常是双击安装包，点击“Next”或“Install”）。</li>
+</ul>
+</li>
+<li><strong>安装 Python 扩展</strong>：<ul>
+<li>打开 VS Code。</li>
+<li>点击左侧活动栏的“扩展”图标（或按快捷键 <code>Ctrl+Shift+X</code>）。</li>
+<li>在搜索框中输入 <code>Python</code>，找到 Microsoft 官方的 Python 扩展，点击“Install”。</li>
+</ul>
+</li>
+<li><strong>配置 Python 解释器</strong>：<ul>
+<li>按 <code>Ctrl+Shift+P</code> 打开命令面板。</li>
+<li>输入 <code>Python: Select Interpreter</code>，选择你安装的 Python 版本（例如 <code>Python 3.11.5</code>）。</li>
+</ul>
+</li>
+<li><strong>测试环境</strong>：<ul>
+<li>创建一个新文件，命名为 <code>test.py</code>。</li>
+<li>输入以下代码：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello from VS Code!&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>点击右上角的“运行”按钮（三角形图标），或按 <code>F5</code>，确认输出 <code>Hello from VS Code!</code>。</li>
+</ul>
+</li>
+</ol>
+<p><strong>小练习</strong>：</p>
+<ul>
+<li>运行 <code>test.py</code> 文件，确认输出。</li>
+<li>尝试修改代码为 <code>print(&quot;I am learning Python!&quot;)</code>，重新运行。</li>
+</ul>
+<hr>
+<h5 id="1-3-变量与数据类型（20-分钟）"><a href="#1-3-变量与数据类型（20-分钟）" class="headerlink" title="1.3 变量与数据类型（20 分钟）"></a>1.3 变量与数据类型（20 分钟）</h5><p><strong>知识点</strong>：</p>
+<ul>
+<li>变量：变量是用来存储数据的容器，Python 中变量无需声明类型。</li>
+<li>变量命名规则：<ul>
+<li>只能包含字母、数字、下划线（<code>_</code>），且不能以数字开头。</li>
+<li>区分大小写（<code>age</code> 和 <code>Age</code> 是不同的变量）。</li>
+<li>不能使用 Python 关键字（如 <code>if</code>、<code>for</code>、<code>print</code>）。</li>
+</ul>
+</li>
+<li>基本数据类型：<ul>
+<li>整数（<code>int</code>）：如 <code>42</code>。</li>
+<li>浮点数（<code>float</code>）：如 <code>3.14</code>。</li>
+<li>字符串（<code>str</code>）：如 <code>&quot;hello&quot;</code>（用单引号或双引号）。</li>
+<li>布尔值（<code>bool</code>）：如 <code>True</code>、<code>False</code>。</li>
+</ul>
+</li>
+<li>查看变量类型：使用 <code>type()</code> 函数。</li>
+<li>类型转换：用 <code>int()</code>、<code>float()</code>、<code>str()</code> 等函数转换类型。</li>
+</ul>
+<p><strong>学习步骤</strong>：</p>
+<ol>
+<li><strong>创建变量</strong>：<ul>
+<li>在 VS Code 中新建文件 <code>variables.py</code>。</li>
+<li>输入以下代码：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age = <span class="number">25</span>           <span class="comment"># 整数</span></span><br><span class="line">height = <span class="number">1.75</span>      <span class="comment"># 浮点数</span></span><br><span class="line">name = <span class="string">&quot;Alice&quot;</span>     <span class="comment"># 字符串</span></span><br><span class="line">is_student = <span class="literal">True</span>  <span class="comment"># 布尔值</span></span><br><span class="line"><span class="built_in">print</span>(age, height, name, is_student)</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，观察输出：<code>25 1.75 Alice True</code>。</li>
+</ul>
+</li>
+<li><strong>查看类型</strong>：<ul>
+<li>修改代码，添加 <code>type()</code>：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(age))      <span class="comment"># 输出：&lt;class &#x27;int&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(height))   <span class="comment"># 输出：&lt;class &#x27;float&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(name))     <span class="comment"># 输出：&lt;class &#x27;str&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(is_student))  <span class="comment"># 输出：&lt;class &#x27;bool&#x27;&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>运行代码，确认类型。</li>
+</ul>
+</li>
+<li><strong>类型转换</strong>：<ul>
+<li>输入以下代码：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">num_str = <span class="string">&quot;123&quot;</span>    <span class="comment"># 字符串</span></span><br><span class="line">num = <span class="built_in">int</span>(num_str) <span class="comment"># 转换为整数</span></span><br><span class="line"><span class="built_in">print</span>(num + <span class="number">10</span>)    <span class="comment"># 输出：133</span></span><br></pre></td></tr></table></figure></li>
+<li>再尝试浮点数转换：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">float_str = <span class="string">&quot;3.14&quot;</span></span><br><span class="line">float_num = <span class="built_in">float</span>(float_str)</span><br><span class="line"><span class="built_in">print</span>(float_num + <span class="number">2.0</span>)  <span class="comment"># 输出：5.14</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<p><strong>小练习</strong>：</p>
+<ul>
+<li>创建变量 <code>score = 95.5</code> 和 <code>subject = &quot;Math&quot;</code>，打印它们的类型。</li>
+<li>将字符串 <code>&quot;42.5&quot;</code> 转换为浮点数，打印结果。</li>
+</ul>
+<hr>
+<h5 id="1-4-运算符（15-分钟）"><a href="#1-4-运算符（15-分钟）" class="headerlink" title="1.4 运算符（15 分钟）"></a>1.4 运算符（15 分钟）</h5><p><strong>知识点</strong>：</p>
+<ul>
+<li>算术运算符：<ul>
+<li><code>+</code>（加）、<code>-</code>（减）、<code>*</code>（乘）、<code>/</code>（除）、<code>//</code>（整除）、<code>%</code>（取模）、<code>**</code>（幂）。</li>
+</ul>
+</li>
+<li>比较运算符：<ul>
+<li><code>==</code>（等于）、<code>!=</code>（不等于）、<code>&lt;</code>（小于）、<code>&gt;</code>（大于）、<code>&lt;=</code>（小于等于）、<code>&gt;=</code>（大于等于）。</li>
+</ul>
+</li>
+<li>逻辑运算符：<ul>
+<li><code>and</code>（与）、<code>or</code>（或）、<code>not</code>（非）。</li>
+</ul>
+</li>
+<li>赋值运算符：<ul>
+<li><code>=</code>（赋值）、<code>+=</code>、<code>-=</code>, 等。</li>
+</ul>
+</li>
+</ul>
+<p><strong>学习步骤</strong>：</p>
+<ol>
+<li><strong>算术运算</strong>：<ul>
+<li>在 <code>operators.py</code> 文件中输入：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(a + b)   <span class="comment"># 输出：13</span></span><br><span class="line"><span class="built_in">print</span>(a - b)   <span class="comment"># 输出：7</span></span><br><span class="line"><span class="built_in">print</span>(a * b)   <span class="comment"># 输出：30</span></span><br><span class="line"><span class="built_in">print</span>(a / b)   <span class="comment"># 输出：3.333...</span></span><br><span class="line"><span class="built_in">print</span>(a // b)  <span class="comment"># 输出：3</span></span><br><span class="line"><span class="built_in">print</span>(a % b)   <span class="comment"># 输出：1</span></span><br><span class="line"><span class="built_in">print</span>(a ** <span class="number">2</span>)  <span class="comment"># 输出：100</span></span><br></pre></td></tr></table></figure></li>
+<li>运行代码，理解每个运算符的作用。</li>
+</ul>
+</li>
+<li><strong>比较与逻辑运算</strong>：<ul>
+<li>输入：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="number">5</span></span><br><span class="line">y = <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(x &lt; y)      <span class="comment"># 输出：True</span></span><br><span class="line"><span class="built_in">print</span>(x == y)     <span class="comment"># 输出：False</span></span><br><span class="line"><span class="built_in">print</span>(x &gt; <span class="number">3</span> <span class="keyword">and</span> y &lt; <span class="number">15</span>)  <span class="comment"># 输出：True</span></span><br><span class="line"><span class="built_in">print</span>(x &gt; <span class="number">7</span> <span class="keyword">or</span> y &lt; <span class="number">5</span>)    <span class="comment"># 输出：False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> x == <span class="number">5</span>)        <span class="comment"># 输出：False</span></span><br></pre></td></tr></table></figure></li>
+<li>运行代码，观察结果。</li>
+</ul>
+</li>
+<li><strong>赋值运算</strong>：<ul>
+<li>输入：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">num = <span class="number">20</span></span><br><span class="line">num += <span class="number">5</span>  <span class="comment"># 等价于 num = num + 5</span></span><br><span class="line"><span class="built_in">print</span>(num)  <span class="comment"># 输出：25</span></span><br><span class="line">num *= <span class="number">2</span>  <span class="comment"># 等价于 num = num * 2</span></span><br><span class="line"><span class="built_in">print</span>(num)  <span class="comment"># 输出：50</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<p><strong>小练习</strong>：</p>
+<ul>
+<li>计算 <code>(8 + 4) * 2</code> 和 <code>15 % 4</code>。</li>
+<li>判断 <code>7 &gt; 3 and 4 &lt; 10</code> 的结果。</li>
+</ul>
+<hr>
+<h4 id="2-实践任务（1-小时）"><a href="#2-实践任务（1-小时）" class="headerlink" title="2. 实践任务（1 小时）"></a>2. 实践任务（1 小时）</h4><p><strong>任务</strong>：编写代码计算圆的面积和周长，尝试用不同数据类型存储变量。</p>
+<h5 id="任务目标"><a href="#任务目标" class="headerlink" title="任务目标"></a>任务目标</h5><ul>
+<li>计算圆的面积（公式：<code>面积 = π * 半径^2</code>）和周长（公式：<code>周长 = 2 * π * 半径</code>）。</li>
+<li>使用不同数据类型（如整数、浮点数、字符串）存储变量。</li>
+</ul>
+<h5 id="步骤分解"><a href="#步骤分解" class="headerlink" title="步骤分解"></a>步骤分解</h5><ol>
+<li><strong>创建文件</strong>（5 分钟）：<ul>
+<li>在 VS Code 中新建文件 <code>circle.py</code>。</li>
+</ul>
+</li>
+<li><strong>导入 math 模块获取 π</strong>（5 分钟）：<ul>
+<li>Python 的 <code>math</code> 模块提供了数学常量和函数。</li>
+<li>输入：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="built_in">print</span>(math.pi)  <span class="comment"># 输出：3.141592653589793</span></span><br></pre></td></tr></table></figure></li>
+<li>确认 <code>math.pi</code> 可用。</li>
+</ul>
+</li>
+<li><strong>定义半径并计算</strong>（20 分钟）：<ul>
+<li>使用不同数据类型存储半径：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用浮点数存储半径</span></span><br><span class="line">radius_float = <span class="number">5.0</span></span><br><span class="line"><span class="comment"># 使用整数存储半径</span></span><br><span class="line">radius_int = <span class="number">5</span></span><br><span class="line"><span class="comment"># 使用字符串存储半径（需转换）</span></span><br><span class="line">radius_str = <span class="string">&quot;5.0&quot;</span></span><br><span class="line">radius_from_str = <span class="built_in">float</span>(radius_str)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算面积和周长（基于浮点数半径）</span></span><br><span class="line">area = math.pi * radius_float ** <span class="number">2</span></span><br><span class="line">circumference = <span class="number">2</span> * math.pi * radius_float</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印结果</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;半径（浮点数）:&quot;</span>, radius_float)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;面积:&quot;</span>, area)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;周长:&quot;</span>, circumference)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证其他数据类型</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;半径（整数）:&quot;</span>, radius_int)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;半径（从字符串转换）:&quot;</span>, radius_from_str)</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出示例：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">半径（浮点数）: 5.0</span></span><br><span class="line"><span class="section">面积: 78.53981633974483</span></span><br><span class="line"><span class="section">周长: 31.41592653589793</span></span><br><span class="line"><span class="section">半径（整数）: 5</span></span><br><span class="line"><span class="section">半径（从字符串转换）: 5.0</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><strong>尝试不同数据类型</strong>（15 分钟）：<ul>
+<li>修改半径值，测试不同类型：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 尝试更大的半径</span></span><br><span class="line">radius_float = <span class="number">10.5</span></span><br><span class="line">area = math.pi * radius_float ** <span class="number">2</span></span><br><span class="line">circumference = <span class="number">2</span> * math.pi * radius_float</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;新半径（浮点数）:&quot;</span>, radius_float)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;新面积:&quot;</span>, area)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;新周长:&quot;</span>, circumference)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 尝试字符串转换错误情况</span></span><br><span class="line">radius_str_invalid = <span class="string">&quot;abc&quot;</span>  <span class="comment"># 无法转换为浮点数</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    radius_from_str = <span class="built_in">float</span>(radius_str_invalid)</span><br><span class="line"><span class="keyword">except</span> ValueError:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;错误：无法将&quot;</span>, radius_str_invalid, <span class="string">&quot;转换为浮点数&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，观察输出和错误处理。</li>
+</ul>
+</li>
+<li><strong>验证与总结</strong>（15 分钟）：<ul>
+<li>检查计算结果是否正确（可以用计算器验证）。</li>
+<li>确保使用了不同数据类型（<code>int</code>、<code>float</code>、<code>str</code>）存储半径，并完成了类型转换。</li>
+<li>保存代码，提交到 GitHub（如果已学习 Git）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="学习总结"><a href="#学习总结" class="headerlink" title="学习总结"></a>学习总结</h3><ol>
+<li><strong>知识点掌握</strong>：<ul>
+<li>安装了 Python 和 VS Code，配置了开发环境。</li>
+<li>理解了变量的定义和命名规则。</li>
+<li>掌握了基本数据类型（<code>int</code>、<code>float</code>、<code>str</code>、<code>bool</code>）和类型转换。</li>
+<li>学会了基本运算符（算术、比较、逻辑、赋值）。</li>
+</ul>
+</li>
+<li><strong>实践任务完成</strong>：<ul>
+<li>成功编写代码计算圆的面积和周长。</li>
+<li>使用了不同数据类型（<code>int</code>、<code>float</code>、<code>str</code>）存储半径，并进行了类型转换。</li>
+</ul>
+</li>
+<li><strong>遇到问题</strong>：<ul>
+<li>如果安装过程中遇到问题，可以参考 Python 官网的安装指南或搜索错误信息。</li>
+<li>如果类型转换报错（如 <code>ValueError</code>），说明输入的字符串无法转换为数值。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="下一步建议"><a href="#下一步建议" class="headerlink" title="下一步建议"></a>下一步建议</h3><ul>
+<li><strong>复习</strong>：回顾今天的代码，确保理解每个部分的作用。</li>
+<li><strong>扩展练习</strong>：<ul>
+<li>尝试计算其他图形的面积（如矩形、三角形）。</li>
+<li>编写代码，将浮点数 <code>3.14</code> 转换为字符串并拼接输出，例如 <code>&quot;Pi is &quot; + str(3.14)</code>。</li>
+</ul>
+</li>
+<li><strong>准备</strong>：明天将学习条件语句和循环，预习《Python 速成课程》第 3-4 章。</li>
+</ul>
+<p>如果在学习或实践过程中遇到任何问题，随时告诉我，我会进一步协助你！祝你学习顺利！</p>
+<p><img src="https://cdn.yuanfei.fun/2024-08-29-15-32-38.png"></p>
+]]></content>
       <categories>
-          
-          <category> 技术 </category>
-          
-          <category> MacOS </category>
-          
+        <category>技术</category>
+        <category>Python</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> MacOS </tag>
-            
-            <tag> 技术 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>技术</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习 day2</title>
+    <url>/2025/03/16/Python%E5%AD%A6%E4%B9%A0%20day2/</url>
+    <content><![CDATA[<p>今天，我们将详细展开<strong>阶段 1 第 1 周 第 2 天</strong>的学习内容，帮助你循序渐进地掌握 Python 中的<strong>条件语句（if-else）和循环（for&#x2F;while）</strong>，并完成实践任务：<strong>编写代码打印九九乘法表；用 while 循环计算 1 到 100 的和</strong>。以下是详细的学习步骤和指导。</p>
+<hr>
+<h3 id="第-2-天学习计划"><a href="#第-2-天学习计划" class="headerlink" title="第 2 天学习计划"></a>第 2 天学习计划</h3><ul>
+<li><strong>学习内容</strong>：Python 基础：条件语句（if-else）、循环（for&#x2F;while）</li>
+<li><strong>资源推荐</strong>：《Python 速成课程》第 3-4 章</li>
+<li><strong>实践任务</strong>：编写代码：打印九九乘法表；用 while 循环计算 1 到 100 的和</li>
+<li><strong>时间分配</strong>：2 小时（理论 1 小时，实践 1 小时）</li>
+</ul>
+<hr>
+<h3 id="详细学习步骤"><a href="#详细学习步骤" class="headerlink" title="详细学习步骤"></a>详细学习步骤</h3><h4 id="1-理论学习（1-小时）"><a href="#1-理论学习（1-小时）" class="headerlink" title="1. 理论学习（1 小时）"></a>1. 理论学习（1 小时）</h4><p>我们将分步骤讲解今天的知识点，确保你理解每个概念。</p>
+<h5 id="1-1-条件语句（if-else）（20-分钟）"><a href="#1-1-条件语句（if-else）（20-分钟）" class="headerlink" title="1.1 条件语句（if-else）（20 分钟）"></a>1.1 条件语句（if-else）（20 分钟）</h5><p><strong>知识点</strong>：</p>
+<ul>
+<li>条件语句用于根据条件执行不同代码块。</li>
+<li>基本结构：<ul>
+<li><code>if</code> 语句：如果条件为真，执行代码块。</li>
+<li><code>elif</code> 语句：如果前面的 <code>if</code> 条件不满足，检查下一个条件。</li>
+<li><code>else</code> 语句：如果所有条件都不满足，执行默认代码块。</li>
+</ul>
+</li>
+<li>语法规则：<ul>
+<li>使用冒号 <code>:</code> 结束条件行。</li>
+<li>代码块使用缩进（通常 4 个空格或 1 个 Tab）。</li>
+<li>条件表达式使用比较运算符（<code>==</code>、<code>!=</code>、<code>&lt;</code>、<code>&gt;</code>、<code>&lt;=</code>、<code>&gt;=</code>）和逻辑运算符（<code>and</code>、<code>or</code>、<code>not</code>）。</li>
+</ul>
+</li>
+<li>常见应用：判断、选择性执行。</li>
+</ul>
+<p><strong>学习步骤</strong>：</p>
+<ol>
+<li><strong>基本 <code>if</code> 语句</strong>：<ul>
+<li>在 VS Code 中新建文件 <code>if_statement.py</code>。</li>
+<li>输入以下代码：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age = <span class="number">18</span></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;你已成年！&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;程序结束&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出：<figure class="highlight"><table><tr><td class="code"><pre><span class="line">你已成年！</span><br><span class="line">程序结束</span><br></pre></td></tr></table></figure></li>
+<li>解释：<code>age &gt;= 18</code> 为真，执行 <code>if</code> 内的代码块。</li>
+</ul>
+</li>
+<li><strong>添加 <code>else</code> 语句</strong>：<ul>
+<li>修改代码：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age = <span class="number">15</span></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;你已成年！&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;你还未成年！&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;程序结束&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出：<figure class="highlight"><table><tr><td class="code"><pre><span class="line">你还未成年！</span><br><span class="line">程序结束</span><br></pre></td></tr></table></figure></li>
+<li>解释：<code>age &gt;= 18</code> 为假，执行 <code>else</code> 内的代码块。</li>
+</ul>
+</li>
+<li><strong>使用 <code>elif</code> 实现多条件判断</strong>：<ul>
+<li>输入：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">score = <span class="number">85</span></span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;优秀&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;及格&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;不及格&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出：<figure class="highlight"><table><tr><td class="code"><pre><span class="line">及格</span><br></pre></td></tr></table></figure></li>
+<li>解释：<code>score &gt;= 90</code> 假，<code>score &gt;= 60</code> 真，执行对应代码块。</li>
+</ul>
+</li>
+</ol>
+<p><strong>小练习</strong>：</p>
+<ul>
+<li>输入 <code>temperature = 25</code>，判断：<ul>
+<li>如果 <code>temperature &gt; 30</code>，打印“太热了”。</li>
+<li>否则，打印“天气不错”。</li>
+</ul>
+</li>
+<li>修改 <code>temperature = 35</code>，重新运行。</li>
+</ul>
+<hr>
+<h5 id="1-2-for-循环（20-分钟）"><a href="#1-2-for-循环（20-分钟）" class="headerlink" title="1.2 for 循环（20 分钟）"></a>1.2 for 循环（20 分钟）</h5><p><strong>知识点</strong>：</p>
+<ul>
+<li><code>for</code> 循环用于遍历可迭代对象（如列表、字符串、范围）。</li>
+<li>基本结构：<ul>
+<li><code>for 变量 in 可迭代对象:</code></li>
+<li>代码块（缩进）。</li>
+</ul>
+</li>
+<li>常用函数：<code>range(start, stop, step)</code> 生成数字序列。<ul>
+<li><code>range(5)</code>：0 到 4。</li>
+<li><code>range(1, 5)</code>：1 到 4。</li>
+<li><code>range(0, 10, 2)</code>：0、2、4、6、8。</li>
+</ul>
+</li>
+<li>应用：重复执行、遍历数据。</li>
+</ul>
+<p><strong>学习步骤</strong>：</p>
+<ol>
+<li><strong>基本 <code>for</code> 循环</strong>：<ul>
+<li>在 <code>for_loop.py</code> 文件中输入：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出：<figure class="highlight"><table><tr><td class="code"><pre><span class="line">0</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td></tr></table></figure></li>
+<li>解释：<code>range(5)</code> 生成 0 到 4 的序列，<code>i</code> 依次取值。</li>
+</ul>
+</li>
+<li>**带起始和步长的 <code>range</code>**：<ul>
+<li>输入：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">6</span>, <span class="number">2</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出：<figure class="highlight"><table><tr><td class="code"><pre><span class="line">1</span><br><span class="line">3</span><br><span class="line">5</span><br></pre></td></tr></table></figure></li>
+<li>解释：从 1 开始，到 6 结束（不包括 6），步长为 2。</li>
+</ul>
+</li>
+<li><strong>遍历列表</strong>：<ul>
+<li>输入：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">fruits = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;orange&quot;</span>]</span><br><span class="line"><span class="keyword">for</span> fruit <span class="keyword">in</span> fruits:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;我喜欢&quot;</span>, fruit)</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出：<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">我喜欢 apple</span><br><span class="line">我喜欢 <span class="keyword">banana</span></span><br><span class="line"><span class="keyword"></span>我喜欢 <span class="keyword">orange</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<p><strong>小练习</strong>：</p>
+<ul>
+<li>用 <code>for</code> 循环打印 1 到 10 的数字。</li>
+<li>创建列表 <code>numbers = [1, 3, 5, 7]</code>，用 <code>for</code> 循环打印每个数加 2 的结果。</li>
+</ul>
+<hr>
+<h5 id="1-3-while-循环（20-分钟）"><a href="#1-3-while-循环（20-分钟）" class="headerlink" title="1.3 while 循环（20 分钟）"></a>1.3 while 循环（20 分钟）</h5><p><strong>知识点</strong>：</p>
+<ul>
+<li><code>while</code> 循环根据条件重复执行代码块，直到条件为假。</li>
+<li>基本结构：<ul>
+<li><code>while 条件:</code></li>
+<li>代码块（缩进）。</li>
+</ul>
+</li>
+<li>注意：需避免无限循环（条件永真），可用 <code>break</code> 终止。</li>
+<li>应用：条件控制、计数。</li>
+</ul>
+<p><strong>学习步骤</strong>：</p>
+<ol>
+<li><strong>基本 <code>while</code> 循环</strong>：<ul>
+<li>输入：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> count &lt; <span class="number">3</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;计数:&quot;</span>, count)</span><br><span class="line">    count += <span class="number">1</span></span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">计数: 0</span></span><br><span class="line"><span class="section">计数: 1</span></span><br><span class="line"><span class="section">计数: 2</span></span><br></pre></td></tr></table></figure></li>
+<li>解释：<code>count</code> 从 0 开始，当 <code>&lt; 3</code> 时执行，<code>count += 1</code> 确保循环结束。</li>
+</ul>
+</li>
+<li><strong>带 <code>break</code> 的循环</strong>：<ul>
+<li>输入：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;计数:&quot;</span>, count)</span><br><span class="line">    count += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> count &gt;= <span class="number">5</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">计数: 0</span></span><br><span class="line"><span class="section">计数: 1</span></span><br><span class="line"><span class="section">计数: 2</span></span><br><span class="line"><span class="section">计数: 3</span></span><br><span class="line"><span class="section">计数: 4</span></span><br></pre></td></tr></table></figure></li>
+<li>解释：<code>break</code> 在 <code>count &gt;= 5</code> 时终止循环。</li>
+</ul>
+</li>
+<li>**带 <code>else</code> 的 <code>while</code>**：<ul>
+<li>输入：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> count &lt; <span class="number">3</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;计数:&quot;</span>, count)</span><br><span class="line">    count += <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;循环结束&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出：<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">计数: 0</span></span><br><span class="line"><span class="section">计数: 1</span></span><br><span class="line"><span class="section">计数: 2</span></span><br><span class="line">循环结束</span><br></pre></td></tr></table></figure></li>
+<li>解释：<code>else</code> 在条件变为假时执行。</li>
+</ul>
+</li>
+</ol>
+<p><strong>小练习</strong>：</p>
+<ul>
+<li>用 <code>while</code> 循环打印 0 到 4。</li>
+<li>用 <code>while</code> 循环计算 1 到 5 的和，打印结果。</li>
+</ul>
+<hr>
+<h4 id="2-实践任务（1-小时）"><a href="#2-实践任务（1-小时）" class="headerlink" title="2. 实践任务（1 小时）"></a>2. 实践任务（1 小时）</h4><p><strong>任务</strong>：编写代码打印九九乘法表；用 while 循环计算 1 到 100 的和。</p>
+<h5 id="任务目标"><a href="#任务目标" class="headerlink" title="任务目标"></a>任务目标</h5><ul>
+<li>打印九九乘法表（1×1 到 9×9）。</li>
+<li>用 <code>while</code> 循环计算 1 到 100 的和。</li>
+</ul>
+<h5 id="步骤分解"><a href="#步骤分解" class="headerlink" title="步骤分解"></a>步骤分解</h5><ol>
+<li><strong>创建文件</strong>（5 分钟）：<ul>
+<li>在 VS Code 中新建文件 <code>practice.py</code>。</li>
+</ul>
+</li>
+<li><strong>打印九九乘法表（用 for 循环）</strong>（25 分钟）：<ul>
+<li>思路：外层循环控制行（1 到 9），内层循环控制列（1 到当前行数）。</li>
+<li>输入代码：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, i + <span class="number">1</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;j&#125;</span>×<span class="subst">&#123;i&#125;</span>=<span class="subst">&#123;i*j&#125;</span>&quot;</span>, end=<span class="string">&quot;\t&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>()  <span class="comment"># 换行</span></span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出示例：<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">1×<span class="attribute">1</span>=1</span><br><span class="line">1×<span class="attribute">2</span>=2    2×<span class="attribute">2</span>=4</span><br><span class="line">1×<span class="attribute">3</span>=3    2×<span class="attribute">3</span>=6    3×<span class="attribute">3</span>=9</span><br><span class="line"><span class="built_in">..</span>.</span><br><span class="line">1×<span class="attribute">9</span>=9    2×<span class="attribute">9</span>=18   <span class="built_in">..</span>.   9×<span class="attribute">9</span>=81</span><br></pre></td></tr></table></figure></li>
+<li>解释：<ul>
+<li><code>f&quot;&#123;j&#125;×&#123;i&#125;=&#123;i*j&#125;&quot;</code> 使用 f-string 格式化输出。</li>
+<li><code>end=&quot;\t&quot;</code> 用制表符分隔乘法结果。</li>
+<li>外层 <code>print()</code> 换行。</li>
+</ul>
+</li>
+<li><strong>优化</strong>：调整代码，使每行对齐（可选，稍后可挑战）。</li>
+</ul>
+</li>
+<li><strong>用 while 循环计算 1 到 100 的和</strong>（20 分钟）：<ul>
+<li>思路：初始化总和和计数器，循环累加直到 100。</li>
+<li>输入代码：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">total = <span class="number">0</span></span><br><span class="line">num = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> num &lt;= <span class="number">100</span>:</span><br><span class="line">    total += num</span><br><span class="line">    num += <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;1 到 100 的和是:&quot;</span>, total)</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出：<figure class="highlight basic"><table><tr><td class="code"><pre><span class="line"><span class="symbol">1 </span>到 <span class="number">100</span> 的和是: <span class="number">5050</span></span><br></pre></td></tr></table></figure></li>
+<li>解释：<ul>
+<li><code>total</code> 初始为 0，<code>num</code> 从 1 开始。</li>
+<li><code>while num &lt;= 100</code> 确保循环到 100。</li>
+<li><code>total += num</code> 累加，<code>num += 1</code> 计数。</li>
+</ul>
+</li>
+<li><strong>验证</strong>：用公式 <code>n * (n + 1) / 2</code> 验证（<code>100 * 101 / 2 = 5050</code>），结果正确。</li>
+</ul>
+</li>
+<li><strong>保存与测试</strong>（10 分钟）：<ul>
+<li>保存 <code>practice.py</code> 文件。</li>
+<li>运行代码，确认九九乘法表和总和计算正确。</li>
+<li>尝试修改 <code>while</code> 循环的上限（如 50），检查结果（<code>50 * 51 / 2 = 1275</code>）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="学习总结"><a href="#学习总结" class="headerlink" title="学习总结"></a>学习总结</h3><ol>
+<li><strong>知识点掌握</strong>：<ul>
+<li>理解并掌握 <code>if-else</code> 条件语句的使用。</li>
+<li>学会 <code>for</code> 循环遍历范围和列表。</li>
+<li>掌握 <code>while</code> 循环的条件控制和终止方法。</li>
+</ul>
+</li>
+<li><strong>实践任务完成</strong>：<ul>
+<li>成功打印九九乘法表，使用嵌套 <code>for</code> 循环。</li>
+<li>用 <code>while</code> 循环正确计算 1 到 100 的和。</li>
+</ul>
+</li>
+<li><strong>遇到问题</strong>：<ul>
+<li>如果乘法表格式混乱，可调整 <code>end=&quot;\t&quot;</code> 或使用 <code>print(f&quot;&#123;j&#125;×&#123;i&#125;=&#123;i*j:&lt;4&#125;&quot;, end=&quot; &quot;)</code> 对齐。</li>
+<li>如果 <code>while</code> 循环不结束，检查条件或计数器更新逻辑。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="下一步建议"><a href="#下一步建议" class="headerlink" title="下一步建议"></a>下一步建议</h3><ul>
+<li><strong>复习</strong>：回顾今天的代码，理解嵌套循环和条件判断的逻辑。</li>
+<li><strong>扩展练习</strong>：<ul>
+<li>修改九九乘法表，只打印 5×5 以内。</li>
+<li>用 <code>for</code> 循环计算 1 到 100 的和，比较与 <code>while</code> 的结果。</li>
+</ul>
+</li>
+<li><strong>准备</strong>：明天将学习数据结构（列表、元组、字典、集合），预习《Python 速成课程》第 5 章。</li>
+</ul>
+<p>如果在学习或实践过程中有任何疑问，随时告诉我，我会进一步协助你！祝你学习愉快！</p>
+<p><img src="https://cdn.yuanfei.fun/2024-08-29-15-32-38.png"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
 </search>
