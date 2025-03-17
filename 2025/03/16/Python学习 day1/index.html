@@ -6,22 +6,30 @@
   <meta name="keywords" content=" 技术 , Python ">
   <meta name="description" content="Python学习 day1 | 远飞的技术站">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="分享各类有趣的知识">
+<meta name="description" content="2024 年 08 月 23 日 山东行   2024 年 08 月 19 日 人民广场 2024 年 08 月 8 日 家里">
 <meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="http://www.yuanfei.fun/about/index.html">
+<meta property="og:title" content="我的照片">
+<meta property="og:url" content="http://www.yuanfei.fun/photo/index.html">
 <meta property="og:site_name" content="远飞的技术站">
-<meta property="og:description" content="分享各类有趣的知识">
+<meta property="og:description" content="2024 年 08 月 23 日 山东行   2024 年 08 月 19 日 人民广场 2024 年 08 月 8 日 家里">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-22T13:28:31.000Z">
-<meta property="article:modified_time" content="2024-08-22T13:29:14.901Z">
+<meta property="og:image" content="https://cdn.yuanfei.fun/2024-08-26-14-24-41.png">
+<meta property="og:image" content="https://cdn.yuanfei.fun/2024-08-26-14-28-13.png">
+<meta property="og:image" content="https://cdn.yuanfei.fun/2024-08-26-14-29-33.png">
+<meta property="og:image" content="https://cdn.yuanfei.fun/2024-08-26-14-38-19.png">
+<meta property="og:image" content="https://cdn.yuanfei.fun/2024-08-26-14-46-02.png">
+<meta property="article:published_time" content="2024-08-22T13:29:44.000Z">
+<meta property="article:modified_time" content="2024-08-26T06:46:14.349Z">
 <meta property="article:author" content="远飞">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.yuanfei.fun/2024-08-26-14-24-41.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/github.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
 
@@ -50,7 +58,7 @@
   <input class="theme_preload_comment" value="">
   <input class="theme_blog_path" value="">
   <input id="theme_shortcut" value="true" />
-  <input id="theme_highlight_on" value="false" />
+  <input id="theme_highlight_on" value="true" />
   <input id="theme_code_copy" value="true" />
 </div>
 
@@ -756,6 +764,20 @@
 
         /*高亮代码块行号*/
         
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
 
         /*访问数量*/
         
@@ -1028,6 +1050,38 @@
 </script>
 
 <!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 18px 3px 15px 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
 
 <!--自定义样式设置-->
 <style>
