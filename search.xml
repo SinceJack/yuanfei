@@ -1,69 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>MacOS软件打开显示已损坏解决方法</title>
-    <url>/2024/08/29/MacOS%E8%BD%AF%E4%BB%B6%E6%89%93%E5%BC%80%E6%98%BE%E7%A4%BA%E5%B7%B2%E6%8D%9F%E5%9D%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<blockquote>
-<p>macOS打开软件提示:“xxx” 已损坏,打不开.您应该将它移到废纸篓 或 无法打开“xxx”，因为无法确认开发者的身份，这个并不是软件真的损坏了,而是由于macOS系统权限和签名的原因，我们只要打开允许任何来源和者手动签名软件就可以了，以下是解决方法请根据需要选择。</p>
-</blockquote>
-<h2 id="1-打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App-Store商店下载的软件"><a href="#1-打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App-Store商店下载的软件" class="headerlink" title="1. 打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App Store商店下载的软件)"></a>1. 打开允许安装从任何位置下载应用程序，<strong>简单的说就是允许安装不是从App Store商店下载的软件)</strong></h2><blockquote>
-<p>Mac电脑默认设置是不允许运行和安装从网上下载的APP和安装包。一般新买的电脑或者刚重装系统或升级系统后的macOS就需要打开“任何来源”这个选项。</p>
-</blockquote>
-<ul>
-<li>我们打开启动台–其他–终端，打开终端</li>
-</ul>
-<p><img src="https://cdn.yuanfei.fun/2024-08-29-14-58-48.png"></p>
-<ul>
-<li>然后输入下面的命令按回车键运行，建议你直接拷贝粘贴，以免你输入错命令；</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>粘贴入命令运行之后会提示Password：输入密码(下图所示)，然后输入你的Mac开机密码按回车键运行即可。</li>
-</ul>
-<blockquote>
-<p><strong>需要注意，密码输入过程是看不见的！</strong></p>
-</blockquote>
-<p><img src="https://cdn.yuanfei.fun/2024-08-29-15-01-07.png"></p>
-<ul>
-<li>最后我们再打开 “系统偏好设置” – “安全性与隐私” – “允许从以下位置下载的App：”，可以看到勾选已经变成了“任何来源”。</li>
-</ul>
-<h2 id="2-对于不是从App-Store商店下载的软件即从网上下载的APP签名操作"><a href="#2-对于不是从App-Store商店下载的软件即从网上下载的APP签名操作" class="headerlink" title="2.对于不是从App Store商店下载的软件即从网上下载的APP签名操作"></a>2.<strong>对于</strong>不是从App Store商店下载的软件即从网上下载的<strong>APP签名操作</strong></h2><blockquote>
-<p>这些命令都是Apple官方公证Gatekeeper命令，即绕过应用签名操作方法，对系统没有任何影响隐患，可以放心大胆的操作。</p>
-</blockquote>
-<ul>
-<li>签名命令：</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>使用方法 sudo xattr -rd com.apple.quarantine空格 APP路径</p>
-</blockquote>
-<h3 id="2-1-我们打开启动台–其他–终端，打开终端"><a href="#2-1-我们打开启动台–其他–终端，打开终端" class="headerlink" title="2.1 我们打开启动台–其他–终端，打开终端"></a>2.1 我们打开启动台–其他–终端，打开终端</h3><p><img src="https://cdn.yuanfei.fun/2024-08-29-14-58-48.png"></p>
-<h3 id="2-2-然后拷贝下面的命令并粘贴到终端"><a href="#2-2-然后拷贝下面的命令并粘贴到终端" class="headerlink" title="2.2 然后拷贝下面的命令并粘贴到终端"></a>2.2 然后拷贝下面的命令并粘贴到终端</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意：sudo xattr -rd com.apple.quarantine后面需要加个空格，操作好后，先不要运行，终端不要关闭。</p>
-</blockquote>
-<blockquote>
-<p>我们这里以Gas Station Simulator为例子，打开“访达” – “应用程序”文件夹找到要操作的APP，找到Gas Station Simulator的应用图标“GSS2”并把它拖到终端里面（如下图）：</p>
-</blockquote>
-<p><img src="https://cdn.yuanfei.fun/2024-08-29-15-32-07.png"></p>
-<blockquote>
-<p>注意！密码输入过程是看不见的。</p>
-</blockquote>
-<p><img src="https://cdn.yuanfei.fun/2024-08-29-15-32-38.png"></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>MacOS</category>
-      </categories>
-      <tags>
-        <tag>MacOS</tag>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python学习 day1</title>
     <url>/2025/03/16/Python%E5%AD%A6%E4%B9%A0%20day1/</url>
     <content><![CDATA[<p>今天！我们将详细展开<strong>阶段 1 第 1 周 第 1 天</strong>的学习内容，帮助你循序渐进地掌握 Python 基础知识，并完成实践任务。今天的主题是 <strong>Python 基础：安装环境（Python 3.x、VS Code），学习变量、数据类型、运算符</strong>，最终完成实践任务：<strong>编写代码计算圆的面积和周长，尝试用不同数据类型存储变量</strong>。</p>
@@ -310,8 +247,71 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Python</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MacOS软件打开显示已损坏解决方法</title>
+    <url>/2024/08/29/MacOS%E8%BD%AF%E4%BB%B6%E6%89%93%E5%BC%80%E6%98%BE%E7%A4%BA%E5%B7%B2%E6%8D%9F%E5%9D%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>macOS打开软件提示:“xxx” 已损坏,打不开.您应该将它移到废纸篓 或 无法打开“xxx”，因为无法确认开发者的身份，这个并不是软件真的损坏了,而是由于macOS系统权限和签名的原因，我们只要打开允许任何来源和者手动签名软件就可以了，以下是解决方法请根据需要选择。</p>
+</blockquote>
+<h2 id="1-打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App-Store商店下载的软件"><a href="#1-打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App-Store商店下载的软件" class="headerlink" title="1. 打开允许安装从任何位置下载应用程序，简单的说就是允许安装不是从App Store商店下载的软件)"></a>1. 打开允许安装从任何位置下载应用程序，<strong>简单的说就是允许安装不是从App Store商店下载的软件)</strong></h2><blockquote>
+<p>Mac电脑默认设置是不允许运行和安装从网上下载的APP和安装包。一般新买的电脑或者刚重装系统或升级系统后的macOS就需要打开“任何来源”这个选项。</p>
+</blockquote>
+<ul>
+<li>我们打开启动台–其他–终端，打开终端</li>
+</ul>
+<p><img src="https://cdn.yuanfei.fun/2024-08-29-14-58-48.png"></p>
+<ul>
+<li>然后输入下面的命令按回车键运行，建议你直接拷贝粘贴，以免你输入错命令；</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>粘贴入命令运行之后会提示Password：输入密码(下图所示)，然后输入你的Mac开机密码按回车键运行即可。</li>
+</ul>
+<blockquote>
+<p><strong>需要注意，密码输入过程是看不见的！</strong></p>
+</blockquote>
+<p><img src="https://cdn.yuanfei.fun/2024-08-29-15-01-07.png"></p>
+<ul>
+<li>最后我们再打开 “系统偏好设置” – “安全性与隐私” – “允许从以下位置下载的App：”，可以看到勾选已经变成了“任何来源”。</li>
+</ul>
+<h2 id="2-对于不是从App-Store商店下载的软件即从网上下载的APP签名操作"><a href="#2-对于不是从App-Store商店下载的软件即从网上下载的APP签名操作" class="headerlink" title="2.对于不是从App Store商店下载的软件即从网上下载的APP签名操作"></a>2.<strong>对于</strong>不是从App Store商店下载的软件即从网上下载的<strong>APP签名操作</strong></h2><blockquote>
+<p>这些命令都是Apple官方公证Gatekeeper命令，即绕过应用签名操作方法，对系统没有任何影响隐患，可以放心大胆的操作。</p>
+</blockquote>
+<ul>
+<li>签名命令：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>使用方法 sudo xattr -rd com.apple.quarantine空格 APP路径</p>
+</blockquote>
+<h3 id="2-1-我们打开启动台–其他–终端，打开终端"><a href="#2-1-我们打开启动台–其他–终端，打开终端" class="headerlink" title="2.1 我们打开启动台–其他–终端，打开终端"></a>2.1 我们打开启动台–其他–终端，打开终端</h3><p><img src="https://cdn.yuanfei.fun/2024-08-29-14-58-48.png"></p>
+<h3 id="2-2-然后拷贝下面的命令并粘贴到终端"><a href="#2-2-然后拷贝下面的命令并粘贴到终端" class="headerlink" title="2.2 然后拷贝下面的命令并粘贴到终端"></a>2.2 然后拷贝下面的命令并粘贴到终端</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：sudo xattr -rd com.apple.quarantine后面需要加个空格，操作好后，先不要运行，终端不要关闭。</p>
+</blockquote>
+<blockquote>
+<p>我们这里以Gas Station Simulator为例子，打开“访达” – “应用程序”文件夹找到要操作的APP，找到Gas Station Simulator的应用图标“GSS2”并把它拖到终端里面（如下图）：</p>
+</blockquote>
+<p><img src="https://cdn.yuanfei.fun/2024-08-29-15-32-07.png"></p>
+<blockquote>
+<p>注意！密码输入过程是看不见的。</p>
+</blockquote>
+<p><img src="https://cdn.yuanfei.fun/2024-08-29-15-32-38.png"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>MacOS</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -535,8 +535,8 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Python</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -557,8 +557,8 @@
         <category>MacOS</category>
       </categories>
       <tags>
-        <tag>MacOS</tag>
         <tag>技术</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
 </search>
