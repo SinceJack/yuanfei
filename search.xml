@@ -349,7 +349,7 @@
 <li><strong>基本 <code>if</code> 语句</strong>：<ul>
 <li>在 VS Code 中新建文件 <code>if_statement.py</code>。</li>
 <li>输入以下代码：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age = <span class="number">18</span></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;你已成年！&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;程序结束&quot;</span>)</span><br></pre></td></tr></table></figure></li>
-<li>运行代码，输出：<figure class="highlight"><table><tr><td class="code"><pre><span class="line">你已成年！</span><br><span class="line">程序结束</span><br></pre></td></tr></table></figure></li>
+<li>运行代码，输出：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">你已成年！</span><br><span class="line">程序结束</span><br></pre></td></tr></table></figure></li>
 <li>解释：<code>age &gt;= 18</code> 为真，执行 <code>if</code> 内的代码块。</li>
 </ul>
 </li>
@@ -540,6 +540,31 @@
       </tags>
   </entry>
   <entry>
+    <title>歌词编码格式批量修改</title>
+    <url>/2025/03/19/Python%E5%AE%9E%E6%88%98:%E6%AD%8C%E8%AF%8D%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9/</url>
+    <content><![CDATA[<h1 id="学习日志：解决比亚迪宋-2017-款歌词乱码问题"><a href="#学习日志：解决比亚迪宋-2017-款歌词乱码问题" class="headerlink" title="学习日志：解决比亚迪宋 2017 款歌词乱码问题"></a>学习日志：解决比亚迪宋 2017 款歌词乱码问题</h1><h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>最近朋友提到，他有一辆比亚迪宋 2017 款的车，用 U 盘播放歌曲时，歌词文件（LRC 格式）在中控屏幕上总是显示乱码。这让我萌生了帮他解决这个问题的想法。初步猜测，可能是歌词文件的编码与中控系统不兼容，于是决定写一个 Python 脚本，批量将歌词文件转换为适合的编码。</p>
+<h2 id="发现问题的过程"><a href="#发现问题的过程" class="headerlink" title="发现问题的过程"></a>发现问题的过程</h2><p>一开始，我尝试将歌词文件从常见的 UTF-8 编码转为 GBK，因为国内很多老设备更倾向于支持 GBK。我用 <code>iconv</code> 命令测试单个文件，发现转换后仍乱码，怀疑中控可能有特殊要求。随后，我用 Python 写了一个脚本，利用 <code>chardet</code> 检测原始编码并转换，结果遇到了 <code>UnicodeEncodeError</code>，提示某些字符（如韩文 <code>\uae40</code>）无法转为 GBK。接着，我调整脚本用 <code>errors=&quot;ignore&quot;</code> 跳过这些字符，但又遇到 <code>UnicodeDecodeError</code>，发现 <code>chardet</code> 检测的编码（如 GB2312）不准确。进一步测试后，我意识到需要更健壮的读取逻辑，同时支持多个文件夹批量处理。</p>
+<h2 id="代码调整与最终方案"><a href="#代码调整与最终方案" class="headerlink" title="代码调整与最终方案"></a>代码调整与最终方案</h2><p>通过查阅 Python 文档和编码相关资料，我不断优化脚本。以下是代码调整的关键过程：</p>
+<ol start="2">
+<li><strong>解决编码错误</strong>：添加 <code>errors=&quot;ignore&quot;</code> 和备用编码 GB18030。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&quot;r&quot;</span>, encoding=original_encoding) <span class="keyword">as</span> f:</span><br><span class="line">        content = f.read()</span><br><span class="line"><span class="keyword">except</span> UnicodeDecodeError:</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;gb18030&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        content = f.read()</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&quot;w&quot;</span>, encoding=<span class="string">&quot;gbk&quot;</span>, errors=<span class="string">&quot;ignore&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(content)</span><br></pre></td></tr></table></figure></li>
+<li><strong>支持多文件夹</strong>：引入 <code>folder_paths</code> 列表，遍历 6 个文件夹。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">folder_paths = [<span class="string">&quot;/Users/yuanfei/Desktop/Lyrics1&quot;</span>, ...]</span><br><span class="line"><span class="keyword">for</span> folder_path <span class="keyword">in</span> folder_paths:</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(folder_path):</span><br><span class="line">        <span class="keyword">if</span> filename.endswith(<span class="string">&quot;.lrc&quot;</span>):</span><br><span class="line">            <span class="comment"># 转换逻辑</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>最终，我完成了以下脚本，成功将 6 个文件夹中的所有歌词转为 GBK 编码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> chardet</span><br><span class="line"></span><br><span class="line">folder_paths = [<span class="string">&quot;/Users/yuanfei/Desktop/Lyrics1&quot;</span>, <span class="string">&quot;/Users/yuanfei/Desktop/Lyrics2&quot;</span>, ...]  <span class="comment"># 6 个文件夹</span></span><br><span class="line">target_encoding = <span class="string">&quot;gbk&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> folder_path <span class="keyword">in</span> folder_paths:</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(folder_path):</span><br><span class="line">        <span class="keyword">if</span> filename.endswith(<span class="string">&quot;.lrc&quot;</span>):</span><br><span class="line">            file_path = os.path.join(folder_path, filename)</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&quot;rb&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                result = chardet.detect(f.read())</span><br><span class="line">                original_encoding = result[<span class="string">&quot;encoding&quot;</span>]</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&quot;r&quot;</span>, encoding=original_encoding) <span class="keyword">as</span> f:</span><br><span class="line">                    content = f.read()</span><br><span class="line">            <span class="keyword">except</span> UnicodeDecodeError:</span><br><span class="line">                <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;gb18030&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                    content = f.read()</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&quot;w&quot;</span>, encoding=target_encoding, errors=<span class="string">&quot;ignore&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                f.write(content)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;已转换: <span class="subst">&#123;filename&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><p>经过多次尝试和调整，脚本成功运行，所有歌词文件转为 GBK 编码。朋友将 U 盘插入比亚迪宋的中控后，歌词终于正常显示，没有乱码。这次经历让我深入理解了编码转换的复杂性，也提升了 Python 文件处理的实战能力。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决 MacOS 微信 QQ 正常登录网页无法访问</title>
     <url>/2024/09/23/%E8%A7%A3%E5%86%B3%20MacOS%20%E5%BE%AE%E4%BF%A1%20QQ%20%E6%AD%A3%E5%B8%B8%E7%99%BB%E5%BD%95%E7%BD%91%E9%A1%B5%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/</url>
     <content><![CDATA[<blockquote>
@@ -548,9 +573,9 @@
 <h2 id="一、删除-apple-网络记录"><a href="#一、删除-apple-网络记录" class="headerlink" title="一、删除 apple 网络记录"></a>一、删除 apple 网络记录</h2><blockquote>
 <p>打开放大，点击上方菜单中的「前往」，复制这个路径「&#x2F;Library&#x2F;Preferences&#x2F;SystemConfiguration」，全选改文件夹下的所有文件，并找到「com.apple.Boot.plist」取消选中，删除除「com.apple.Boot.plist」之外的所有文件，重启即可。</p>
 </blockquote>
-<p><img src="https://cdn.yuanfei.fun/2024-09-23-14-51-12.png" alt="2024-09-23-14-51-12"></p>
-<p><img src="https://cdn.yuanfei.fun/2024-09-23-14-52-41.png" alt="2024-09-23-14-52-41"></p>
-<p><img src="https://cdn.yuanfei.fun/2024-09-23-14-54-40.png" alt="2024-09-23-14-54-40"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SinceJack/image-repo@master/images/%E9%98%BF%E7%94%98%E6%AD%A3%E4%BC%A0.jpg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SinceJack/image-repo@master/images/%E9%9C%B8%E7%8E%8B%E5%88%AB%E5%A7%AC.jpg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SinceJack/image-repo@master//images/%E6%B5%B7%E4%B8%8A%E9%92%A2%E7%90%B4%E5%B8%88.jpg"></p>
 ]]></content>
       <categories>
         <category>技术</category>
